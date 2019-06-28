@@ -8,7 +8,7 @@
         fixed
     >
     <v-toolbar-title style="width: 300px" class="ml-0 pl-3" to="/">
-        <v-btn class="hidden-sm-and-down " flat to="/nfe/listar">NF-E Visual</v-btn>
+        <v-btn class="hidden-sm-and-down" flat>NF-E Visual</v-btn>
     </v-toolbar-title>
         <v-text-field
                 append-icon="search"

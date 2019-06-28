@@ -11,10 +11,16 @@ const buildData = (params) => {
 };
 
 export const syncCertificado = (params) => {
-  const path = '/nfe/admin/cadastrar-certificado';
-  return http.postRequest(path, buildData(params));
+    const path = '/admin/certificado';
+    return http.postRequest(path, buildData(params));
 };
 
-export const syncListarCertificado = function () {
-  return http.postRequest('/nfe/admin/listar-certificados');
+export const syncListarCertificado  = function() {
+    return http.getRequest('/admin/certificados');
+};
+
+export const syncExcluirCertificado = (id) => {
+    const path = '/admin/certificado';
+
+    return http.deleteRequest(path, (id));
 };

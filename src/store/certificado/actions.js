@@ -22,3 +22,14 @@ export const listarCertificadoAction = ({ commit }) => {
       // throw new TypeError(e, 'error', 10);
     });
 };
+
+export const excluirCertificadoAction = async ({ commit }, id) => {
+    const result = await api.syncExcluirCertificado(id)
+        .then(() => {
+            commit(types.SYNC_EXCLUIR_CERTIFICADO, id)
+        }).catch((e) => {
+            // console.log(e)
+            // throw new TypeError(e, 'error', 10);
+        });
+    return result;
+};
